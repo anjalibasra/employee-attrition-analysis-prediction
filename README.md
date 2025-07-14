@@ -1,102 +1,142 @@
-🧠 Employee Attrition Risk Prediction
-
- 📁 Dataset Overview
-
-This project utilizes a structured HR dataset comprising records of 1,470 employees across 35 features. Each entry represents a unique employee and includes both personal and job-related attributes. The dataset provides valuable insights into workforce dynamics and enables predictive modeling to anticipate employee attrition.
-
- 📊 Key Features:
-
-  Age – Age of the employee
-  
-  Gender – Male or Female
-  
-  Department – The department in which the employee works (e.g., Sales, HR, R&D)
-  
-  Job Role – The employee’s specific job title or function
-  
-  Monthly Income – The employee’s monthly salary
-  
-  Attrition – Indicates whether the employee has left the organization (Yes/No)
-  
-  Job Satisfaction – Satisfaction level on a scale from 1 (Low) to 4 (High)
-  
-  OverTime – Whether the employee works overtime (Yes/No)
-  
-  Years at Company – Total number of years spent at the company
-  
-  Education – Education level on a scale from 1 to 5
+Based on your full project report (`HR_PROJECT_REPORT (2).pdf`), here is a **formal and structured GitHub README** that covers **dataset, problem statement, approach, tools, visualization, and machine learning**—exactly as presented in your report.
 
 ---
 
-❓ Problem Statement
+# 🧠 Employee Attrition Risk Prediction
 
-Employee attrition is a pressing concern for human resource departments across industries. High turnover can lead to increased recruitment costs, loss of skilled personnel, and reduced organizational performance.
+## 📁 Dataset Overview
 
- 🎯 Objective:
+The dataset used in this project comprises **1,470 employee records** across **35 columns**. It provides demographic, job-related, and behavioral insights that are essential for analyzing employee attrition.
 
-To analyze HR data and **predict the likelihood of employee attrition** by leveraging data visualization and machine learning techniques. The goal is to support proactive strategies aimed at improving employee retention and workplace satisfaction.
+### Key Features:
 
----
-
- ✅ Methodology
-
- 1. 🧹 Data Cleaning (Power BI – Power Query)
-
-The raw dataset was cleaned and transformed using Power BI’s Power Query Editor. Key steps included:
-
- Removal of irrelevant or redundant columns
- Renaming of fields for clarity and consistency
- Conversion of data types to appropriate formats
- Handling of missing or null values
- Elimination of duplicate entries
+* **Age** – Age of the employee
+* **Gender** – Male or Female
+* **Department** – Business unit (e.g., Sales, HR, R\&D)
+* **Job Role** – Position title within the organization
+* **Monthly Income** – Employee’s monthly salary
+* **Attrition** – Whether the employee left the company (Yes/No)
+* **Job Satisfaction** – Satisfaction level (1 = Low, 4 = High)
+* **OverTime** – Whether the employee works overtime
+* **Years at Company** – Tenure with the organization
+* **Education** – Education level (scale of 1–5)
 
 ---
 
- 2. 📊 Dashboard Development (Power BI)
+## ❓ Problem Statement
 
-An interactive HR dashboard was created to provide a comprehensive overview of employee trends and attrition metrics. Key visualizations include:
+Employee attrition is a critical concern in workforce management. High turnover rates lead to increased hiring costs, operational disruptions, and loss of valuable talent.
 
- Total employee count
- Overall attrition rate
- Department-wise employee distribution
- Income distribution by education level
- Average monthly income
- Total experience across employees
- These visuals enable stakeholders to make real-time, data-driven decisions and identify high-risk segments within the organization.
+### 🎯 Objective:
+
+To analyze HR data and **predict which employees are at risk of leaving** the organization using **data visualization** and **machine learning models**, thereby enabling timely and informed HR decisions.
 
 ---
 
- 3. 📈 Exploratory Data Analysis (Python)
+## ✅ Project Workflow
 
-Python libraries such as `pandas`, `matplotlib`, and `seaborn` were used to perform detailed exploratory data analysis, including:
+### 1. 🧹 Data Cleaning using Power BI (Power Query)
 
-Attrition by Job Role
-Attrition by Department
-Attrition by Age Band
-Monthly Income vs. Attrition (Box Plot)
-Commute Distance vs. Attrition (Box Plot)
-Correlation Heatmap (to identify feature relationships)
+Performed essential transformations to prepare the dataset for analysis:
 
- These analyses helped uncover patterns and potential drivers of attrition within the workforce.
+* Removed irrelevant and redundant columns
+* Renamed columns for clarity
+* Converted data types (numeric, text, date)
+* Handled missing values and removed duplicates
+* Filtered for logical and relevant records
+
+> **DAX Measures Created**:
+
+* `Total Employees`
+* `Average Monthly Income`
+* `Total Experience`
+* `Employees by Department`
+* `Income by Education Level`
+
+---
+
+### 2. 📊 Dashboard Creation (Power BI)
+
+An interactive dashboard was developed using the cleaned data, presenting:
+
+* Total employee count
+* Attrition rate
+* Department-wise distribution
+* Average monthly income
+* Salary comparisons by education
+* Experience metrics
+
+This dashboard provides **a visual summary** of the organization's workforce status and aids **real-time decision-making**.
 
 ---
 
- 4. 🤖 Machine Learning Implementation
+### 3. 📈 Exploratory Data Analysis (Python)
 
-A classification model was built to predict employee attrition risk using selected features. The model supports:
+Used Python libraries `pandas`, `matplotlib`, and `seaborn` for visual analysis of attrition trends:
 
-* Identification of high-risk employees
-* Development of targeted retention strategies
-* Reduction of overall employee turnover
+* **Attrition by Job Role** – Identified roles with high turnover
+* **Attrition by Department** – Highlighted department-wise trends
+* **Age Band vs Attrition** – Revealed age groups with higher attrition
+* **Income vs Attrition** (Box Plot)
+* **Distance from Home vs Attrition** (Box Plot)
+* **Correlation Heatmap** – Detected feature relationships
+  
+* **Attrition Rate by Age Band** – Grouped percentage comparison
+
+These visualizations provided actionable insights for feature selection and workforce planning.
 
 ---
- 💡 Final Outcome & Impact
 
-This project delivers an integrated solution that combines business intelligence and predictive analytics to address the challenge of employee attrition. The insights obtained empower HR professionals to:
- Intervene early in at-risk cases
- Implement data-informed retention programs
- Enhance overall employee engagement and satisfaction
+4. 🤖 Machine Learning Implementation
 
- In conclusion, the project highlights how data science can effectively support HR decision-making and workforce optimization.
+Two supervised learning models were implemented:
+
+🔹 Model 1 – K-Nearest Neighbors (KNN)
+
+ Features: `Age`, `Distance From Home`
+ 
+ Preprocessing: Feature scaling using `StandardScaler`
+ 
+Classifier: `KNeighborsClassifier (n=5)`
+
+Evaluation: Accuracy & classification report
+
+Visualization: Scatter plot to show attrition distribution
+
+ 🔹 Model 2 – Decision Tree Classifier
+
+  Features: All relevant numeric and encoded features
+
+  Preprocessing: Label encoding of categorical variables
+  
+  Classifier: `DecisionTreeClassifier (max_depth=4)`
+ 
+  Evaluation: Accuracy & decision tree visualization
+
+Both models were trained using a 70:30 train-test split to evaluate performance.
+
+---
+
+💡 Conclusion
+
+This project provides a complete pipeline for understanding and predicting employee attrition using:
+
+  Power BI for data cleaning and dynamic dashboards
+  
+  Python for in-depth exploratory data analysis
+  
+  Machine Learning models (KNN, Decision Tree) for prediction
+
+By identifying high-risk employees, organizations can take proactive retention measures, reduce turnover, and improve workforce stability.
+
+---
+
+ ⚙️ Tools & Technologies
+
+  Power BI (Power Query, DAX)
+  
+  Python (pandas, seaborn, matplotlib, scikit-learn)
+  
+  Excel for raw and cleaned datasets
 
 
