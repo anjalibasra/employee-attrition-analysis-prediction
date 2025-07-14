@@ -1,6 +1,6 @@
 
 
-#🧠 Employee Attrition Risk Prediction
+# 🧠 Employee Attrition Risk Prediction
 
 ## 📁 Dataset Overview
 
@@ -78,63 +78,54 @@ Used Python libraries `pandas`, `matplotlib`, and `seaborn` for visual analysis 
 * **Income vs Attrition** (Box Plot)
 * **Distance from Home vs Attrition** (Box Plot)
 * **Correlation Heatmap** – Detected feature relationships
-  
 * **Attrition Rate by Age Band** – Grouped percentage comparison
 
 These visualizations provided actionable insights for feature selection and workforce planning.
 
 ---
 
-4. 🤖 Machine Learning Implementation
+### 4. 🤖 Machine Learning Implementation
 
 Two supervised learning models were implemented:
 
-🔹 Model 1 – K-Nearest Neighbors (KNN)
+#### 🔹 Model 1 – K-Nearest Neighbors (KNN)
 
- Features: `Age`, `Distance From Home`
- 
- Preprocessing: Feature scaling using `StandardScaler`
- 
-Classifier: `KNeighborsClassifier (n=5)`
+* **Features**: `Age`, `Distance From Home`
+* **Preprocessing**: Feature scaling using `StandardScaler`
+* **Classifier**: `KNeighborsClassifier (n=5)`
+* **Evaluation**: Accuracy & classification report
+* **Visualization**: Scatter plot to show attrition distribution
 
-Evaluation: Accuracy & classification report
+#### 🔹 Model 2 – Decision Tree Classifier
 
-Visualization: Scatter plot to show attrition distribution
+* **Features**: All relevant numeric and encoded features
+* **Preprocessing**: Label encoding of categorical variables
+* **Classifier**: `DecisionTreeClassifier (max_depth=4)`
+* **Evaluation**: Accuracy & decision tree visualization
 
- 🔹 Model 2 – Decision Tree Classifier
-
-  Features: All relevant numeric and encoded features
-
-  Preprocessing: Label encoding of categorical variables
-  
-  Classifier: `DecisionTreeClassifier (max_depth=4)`
- 
-  Evaluation: Accuracy & decision tree visualization
-
-Both models were trained using a 70:30 train-test split to evaluate performance.
+Both models were trained using a **70:30 train-test split** to evaluate performance.
 
 ---
 
-💡 Conclusion
+## 💡 Conclusion
 
-This project provides a complete pipeline for understanding and predicting employee attrition using:
+This project provides a **complete pipeline** for understanding and predicting employee attrition using:
 
-  Power BI for data cleaning and dynamic dashboards
-  
-  Python for in-depth exploratory data analysis
-  
-  Machine Learning models (KNN, Decision Tree) for prediction
+* **Power BI** for data cleaning and dynamic dashboards
+* **Python** for in-depth exploratory data analysis
+* **Machine Learning** models (KNN, Decision Tree) for prediction
 
-By identifying high-risk employees, organizations can take proactive retention measures, reduce turnover, and improve workforce stability.
+By identifying high-risk employees, organizations can take **proactive retention measures**, reduce turnover, and improve workforce stability.
 
 ---
 
- ⚙️ Tools & Technologies
+## ⚙️ Tools & Technologies
 
-  Power BI (Power Query, DAX)
-  
-  Python (pandas, seaborn, matplotlib, scikit-learn)
-  
-  Excel for raw and cleaned datasets
+* **Power BI (Power Query, DAX)**
+* **Python (pandas, seaborn, matplotlib, scikit-learn)**
+* **Excel** for raw and cleaned datasets
+* **Jupyter/IDLE** environment for Python development
+
+---
 
 
