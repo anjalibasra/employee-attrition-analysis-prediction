@@ -1,4 +1,5 @@
 🧠 Employee Attrition Risk Prediction
+
  📁 Dataset Overview
 
 This project utilizes a structured HR dataset comprising records of 1,470 employees across 35 features. Each entry represents a unique employee and includes both personal and job-related attributes. The dataset provides valuable insights into workforce dynamics and enables predictive modeling to anticipate employee attrition.
@@ -6,10 +7,15 @@ This project utilizes a structured HR dataset comprising records of 1,470 employ
  📊 Key Features:
 
   Age – Age of the employee
+  
   Gender – Male or Female
+  
   Department – The department in which the employee works (e.g., Sales, HR, R&D)
+  
   Job Role – The employee’s specific job title or function
+  
   Monthly Income – The employee’s monthly salary
+  
   Attrition – Indicates whether the employee has left the organization (Yes/No)
   Job Satisfaction – Satisfaction level on a scale from 1 (Low) to 4 (High)
   OverTime – Whether the employee works overtime (Yes/No)
