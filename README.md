@@ -17,9 +17,13 @@ This project utilizes a structured HR dataset comprising records of 1,470 employ
   Monthly Income – The employee’s monthly salary
   
   Attrition – Indicates whether the employee has left the organization (Yes/No)
+  
   Job Satisfaction – Satisfaction level on a scale from 1 (Low) to 4 (High)
+  
   OverTime – Whether the employee works overtime (Yes/No)
+  
   Years at Company – Total number of years spent at the company
+  
   Education – Education level on a scale from 1 to 5
 
 ---
